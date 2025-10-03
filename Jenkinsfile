@@ -24,7 +24,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Miro193/javafx_with_mariadb.git'
+                git branch: 'main', url: 'https://github.com/Miro193/week7_lectureassignment.git'
             }
         }
 
