@@ -39,7 +39,7 @@
 </dependencies>
 
 <build>
-
+<finalName>app</finalName>
 <plugins>
     <!-- JavaFX Maven Plugin -->
     <plugin>
