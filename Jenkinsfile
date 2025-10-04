@@ -8,7 +8,7 @@ pipeline {
     environment {
         PATH = "/usr/local/bin:${env.PATH}"
         DOCKERHUB_CREDENTIALS_ID = 'Docker_Miro_Hub'
-        DOCKER_IMAGE = 'miroval/javafx_with_db2'
+        DOCKER_IMAGE = 'mirovaltonen2/javafx_with_db2'
         DOCKER_TAG = 'latest'
     }
 
@@ -69,7 +69,7 @@ pipeline {
                         withCredentials([usernamePassword(credentialsId: "${DOCKERHUB_CREDENTIALS_ID}", usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                             sh '''
                                 docker login -u $DOCKER_USER -p $DOCKER_PASS
-                                docker push $DOCKERHUB_REPO:$DOCKER_IMAGE_TAG
+                                docker push $DOCKER_IMAGE:$DOCKER_TAG
                             '''
                         }
                     }
